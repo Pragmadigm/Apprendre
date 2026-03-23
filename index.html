@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apprendre 🚀</title>
+  <meta name="description" content="Apprends l'informatique de façon fun et interactive !" />
+  <!-- Fonctionne entièrement hors ligne (offline) — pas de CDN externe -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       VUE 1 — PROFIL : création du compte apprenant
+       ══════════════════════════════════════════════════════ -->
+  <div id="view-profile" class="view">
+    <div class="profile-hero">
+      <div class="profile-logo">🚀</div>
+      <h1 class="profile-title">Apprendre</h1>
+      <p class="profile-subtitle">L'informatique, c'est fun !</p>
+    </div>
+
+    <div class="profile-card">
+      <h2>👋 Crée ton profil d'apprenant</h2>
+
+      <!-- Saisie du pseudo -->
+      <div class="input-group">
+        <label for="pseudo-input">TON PSEUDO</label>
+        <input
+          id="pseudo-input"
+          type="text"
+          placeholder="Ex : Ninja42, CoderPro..."
+          maxlength="20"
+          autocomplete="off"
+          onkeydown="if(event.key==='Enter') submitProfile()"
+        />
+      </div>
+
+      <!-- Choix de l'avatar -->
+      <span class="avatar-label">CHOISIS TON AVATAR</span>
+      <div id="avatar-grid">
+        <!-- Rempli dynamiquement par app.js -->
+      </div>
+
+      <button class="btn-primary profile-submit" onclick="submitProfile()">
+        C'est parti ! 🎮
+      </button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       VUE 2 — ACCUEIL : tableau de bord et cours
+       ══════════════════════════════════════════════════════ -->
+  <div id="view-home" class="view">
+
+    <!-- En-tête de l'application -->
+    <header class="app-header">
+      <span class="app-logo">🚀</span>
+      <span class="app-name">Apprendre</span>
+      <div class="header-spacer"></div>
+      <button class="btn-reset" onclick="resetProfile()" title="Réinitialiser le profil">
+        ↩️ Réinitialiser
+      </button>
+    </header>
+
+    <!-- Bannière profil utilisateur avec XP -->
+    <div class="user-profile-banner">
+      <div id="user-avatar" class="user-avatar-big">🦊</div>
+      <div class="user-info">
+        <div class="user-greeting">Bonjour,</div>
+        <div id="user-pseudo" style="font-size:1.5rem;font-weight:800;">—</div>
+        <div class="user-stats">
+          <span class="user-stat" id="user-xp">0 XP</span>
+          <span class="user-stat" id="user-level">🌱 Débutant</span>
+        </div>
+        <!-- Barre de progression XP -->
+        <div class="xp-progress-wrap">
+          <div class="xp-bar-track">
+            <div id="xp-bar" style="width:0%"></div>
+          </div>
+          <span id="xp-next">100 XP pour le niveau 2</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Liste des cours -->
+    <p class="section-title">
+      Tes cours <span class="section-subtitle">— clique pour commencer !</span>
+    </p>
+    <div id="courses-grid">
+      <!-- Cartes générées par app.js -->
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       VUE 3 — COURS : lecture des chapitres
+       ══════════════════════════════════════════════════════ -->
+  <div id="view-course" class="view">
+
+    <!-- Sidebar avec la liste des chapitres -->
+    <aside class="course-sidebar" id="course-sidebar">
+      <div class="sidebar-header">
+        <!-- Retour à l'accueil -->
+        <button class="sidebar-back" onclick="goHome()">
+          ← Retour
+        </button>
+        <div id="course-nav-emoji" class="sidebar-course-emoji">💻</div>
+        <div id="course-nav-title">Cours</div>
+      </div>
+      <!-- Liste des chapitres (générée par app.js) -->
+      <div id="chapter-list"></div>
+    </aside>
+
+    <!-- Zone de contenu principale -->
+    <main class="course-main">
+      <!-- Contenu HTML du chapitre (injecté par app.js) -->
+      <div id="chapter-content"></div>
+
+      <!-- Navigation entre chapitres -->
+      <div class="chapter-nav">
+        <button id="btn-prev-chapter" onclick="goToChapter(currentChapterIndex - 1)">
+          ← Précédent
+        </button>
+        <button id="btn-next-chapter">
+          Suivant →
+        </button>
+      </div>
+    </main>
+
+    <!-- Bouton flottant pour ouvrir la sidebar sur mobile -->
+    <button class="sidebar-toggle" onclick="toggleSidebar()" title="Sommaire des chapitres">
+      ☰
+    </button>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       VUE 4 — QUIZ : questions interactives
+       ══════════════════════════════════════════════════════ -->
+  <div id="view-quiz" class="view">
+
+    <!-- En-tête du quiz -->
+    <div class="quiz-header-bar">
+      <button class="quiz-back-btn" onclick="goHome()">← Quitter</button>
+      <div class="quiz-title-area">
+        <span id="quiz-course-emoji">🎮</span>
+        <span id="quiz-course-title">Quiz</span>
+      </div>
+    </div>
+
+    <!-- Zone du quiz (rendue par quiz.js) -->
+    <div id="quiz-container">
+      <!-- Contenu injecté par QuizEngine -->
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       Scripts — ordre important : données → storage → quiz → app
+       ══════════════════════════════════════════════════════ -->
+  <script src="data/courses.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Gestion sidebar mobile -->
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('course-sidebar');
+      sidebar.classList.toggle('open');
+    }
+    // Ferme la sidebar si on clique en dehors (mobile)
+    document.addEventListener('click', function(e) {
+      const sidebar = document.getElementById('course-sidebar');
+      const toggle = document.querySelector('.sidebar-toggle');
+      if (sidebar && sidebar.classList.contains('open')
+          && !sidebar.contains(e.target)
+          && e.target !== toggle) {
+        sidebar.classList.remove('open');
+      }
+    });
+  </script>
+
+</body>
+</html>
