@@ -565,6 +565,43 @@ body::before {
 .review-wrong   { color: var(--text-muted); }
 .review-q { flex: 1; line-height: 1.4; }
 
+/* ── Figures illustratives dans les chapitres ───────── */
+.chapter-figure {
+  margin: 24px 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--bg-card2);
+}
+.chapter-figure img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.chapter-figure:hover img { transform: scale(1.02); }
+
+/* Deux images côte à côte */
+.chapter-figure--duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+.chapter-figure--duo img {
+  max-height: 240px;
+}
+.chapter-figure--duo img:first-child { border-right: 1px solid rgba(255,255,255,0.08); }
+.chapter-figure--duo figcaption { grid-column: 1 / -1; }
+.chapter-figure figcaption {
+  padding: 12px 16px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-style: italic;
+}
+
 /* ── Responsive ─────────────────────────────────────── */
 @media (max-width: 768px) {
   #view-course.active { grid-template-columns: 1fr; }

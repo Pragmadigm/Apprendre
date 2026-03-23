@@ -1,0 +1,47 @@
+Images à télécharger pour le site Apprendre
+=============================================
+Toutes ces images sont disponibles gratuitement sur Wikimedia Commons (licence libre).
+Va sur https://commons.wikimedia.org et recherche les termes ci-dessous.
+Enregistre chaque image dans ce dossier (img/) avec le nom de fichier indiqué.
+
+COURS : L'Ordinateur
+---------------------
+cpu-chip.jpg
+  Recherche : "Intel Core processor die shot" ou "AMD Ryzen processor"
+  Ex. : Intel Core i7 die photograph — vue macro d'une puce de processeur
+
+hdd-inside.jpg
+  Recherche : "hard disk drive open internals"
+  Ex. : photo d'un HDD ouvert montrant les plateaux et le bras de lecture
+
+ssd.jpg
+  Recherche : "solid state drive SSD M.2 SATA"
+  Ex. : photo d'un SSD (format 2.5" ou M.2) — les deux images s'affichent côte à côte
+
+motherboard.jpg
+  Recherche : "computer motherboard ATX"
+  Ex. : photo d'une carte mère avec ses composants visibles
+
+COURS : L'Intelligence Artificielle
+-------------------------------------
+neural-network.jpg
+  Recherche : "artificial neural network diagram"
+  Ex. : schéma coloré d'un réseau de neurones avec couches d'entrée/cachée/sortie
+
+COURS : Internet Mondial
+-------------------------
+cable-cross-section.jpg
+  Recherche : "submarine communications cable cross section"
+  Ex. : la célèbre illustration montrant les 7 couches d'un câble sous-marin
+
+cable-ship.jpg
+  Recherche : "cable layer ship submarine cable"
+  Ex. : photo du CS Respighi, CS Durable ou tout autre navire câblier en opération
+
+datacenter.jpg
+  Recherche : "data center server room aisle"
+  Ex. : photo d'une allée de serveurs (Google, Facebook ou générique Wikimedia)
+
+=============================================
+Conseil : préfère des images en format paysage (16:9 ou 4:3) pour un meilleur rendu.
+Si une image est manquante, elle est simplement masquée — le cours fonctionne sans.

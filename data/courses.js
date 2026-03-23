@@ -32,6 +32,10 @@ const COURSES_DATA = [
             <li><strong>Décoder</strong> ce qu'il doit faire</li>
             <li><strong>Exécuter</strong> l'action (calculer, déplacer des données...)</li>
           </ol>
+          <figure class="chapter-figure">
+            <img src="img/cpu-chip.jpg" alt="Gros plan d'un processeur moderne" onerror="this.closest('figure').style.display='none'" />
+            <figcaption>Un processeur moderne — des milliards de transistors sur une puce de la taille d'une pièce de monnaie.</figcaption>
+          </figure>
           <div class="fun-fact">
             💡 <strong>Le savais-tu ?</strong> Le premier processeur grand public (Intel 4004, 1971) fonctionnait à 0,000740 GHz. Aujourd'hui on dépasse facilement 5 GHz — soit <strong>6 000 fois plus rapide !</strong>
           </div>
@@ -81,6 +85,11 @@ const COURSES_DATA = [
           </ul>
           <h3>Pourquoi le SSD change tout ?</h3>
           <p>Avant les SSD, démarrer un PC prenait 2-3 minutes. Avec un SSD, c'est <strong>10-15 secondes</strong>. Les jeux se chargent aussi bien plus vite !</p>
+          <figure class="chapter-figure chapter-figure--duo">
+            <img src="img/hdd-inside.jpg" alt="Intérieur d'un disque dur HDD ouvert" onerror="this.parentElement.style.display='none'" />
+            <img src="img/ssd.jpg" alt="Un SSD — aucune pièce mécanique" onerror="this.parentElement.style.display='none'" />
+            <figcaption>À gauche : un HDD ouvert — on voit les plateaux magnétiques et le bras de lecture. À droite : un SSD, aucune pièce mobile.</figcaption>
+          </figure>
           <div class="fun-fact">
             💡 <strong>Le savais-tu ?</strong> Un SSD n'a aucune pièce mécanique. C'est pour ça qu'il ne fait aucun bruit et survit mieux si on fait tomber son ordi portable !
           </div>
@@ -133,6 +142,10 @@ const COURSES_DATA = [
           </ul>
           <h3>Le BIOS/UEFI</h3>
           <p>La carte mère contient aussi un petit programme appelé <strong>BIOS</strong> (ou UEFI). C'est le tout premier programme qui se lance quand tu appuies sur le bouton Power — il vérifie que tout est branché correctement, puis démarre Windows (ou Linux) !</p>
+          <figure class="chapter-figure">
+            <img src="img/motherboard.jpg" alt="Carte mère d'ordinateur avec ses composants" onerror="this.closest('figure').style.display='none'" />
+            <figcaption>Une carte mère — on distingue le socket CPU (centre), les slots RAM (barrettes noires), les slots PCIe pour la carte graphique, et les connecteurs SATA pour les disques.</figcaption>
+          </figure>
           <div class="fun-fact">
             💡 <strong>Récap :</strong> CPU (cerveau) + RAM (bureau) + SSD (armoire) + GPU (artiste) + Carte mère (routes) = un ordinateur complet ! Tu as tout compris 🎉
           </div>
@@ -259,6 +272,10 @@ const COURSES_DATA = [
           <div class="info-box">
             <strong>🤔 Une analogie :</strong> Imagine des millions de petits boutons de volume. Au début ils sont réglés au hasard. L'IA fait une erreur → on tourne légèrement les boutons → l'erreur diminue. On répète ça des milliards de fois jusqu'à ce que l'IA soit bonne !
           </div>
+          <figure class="chapter-figure">
+            <img src="img/neural-network.jpg" alt="Illustration d'un réseau de neurones artificiel" onerror="this.closest('figure').style.display='none'" />
+            <figcaption>Un réseau de neurones artificiels — chaque cercle est un "neurone", chaque ligne une connexion avec un "poids" que l'entraînement va ajuster.</figcaption>
+          </figure>
           <h3>Le réseau de neurones artificiels</h3>
           <p>L'IA est construite comme un <strong>réseau de neurones</strong> inspiré du cerveau humain :</p>
           <ul>
@@ -464,8 +481,16 @@ const COURSES_DATA = [
             <li>🛡️ Autour : plusieurs couches de protection (acier, plastique) pour résister à la pression, aux ancres de bateaux, aux requins...</li>
             <li>📏 Diamètre : pas beaucoup plus épais qu'un <strong>tuyau d'arrosage !</strong></li>
           </ul>
+          <figure class="chapter-figure">
+            <img src="img/cable-cross-section.jpg" alt="Coupe transversale d'un câble sous-marin à fibres optiques" onerror="this.closest('figure').style.display='none'" />
+            <figcaption>Coupe d'un câble sous-marin : au centre les fibres optiques, entourées de couches d'acier et de plastique pour résister aux fonds marins.</figcaption>
+          </figure>
           <h3>Comment on les pose ?</h3>
-          <p>Des <strong>navires câbliers</strong> spéciaux déroutent lentement le câble au fond de l'océan. Pour un câble transatlantique, ça prend plusieurs semaines !</p>
+          <p>Des <strong>navires câbliers</strong> spéciaux déroulent lentement le câble au fond de l'océan. Pour un câble transatlantique, ça prend plusieurs semaines !</p>
+          <figure class="chapter-figure">
+            <img src="img/cable-ship.jpg" alt="Navire câblier posant un câble sous-marin" onerror="this.closest('figure').style.display='none'" />
+            <figcaption>Un navire câblier en action — il embarque des centaines de kilomètres de câble en bobine et le déroule lentement au fond de l'océan.</figcaption>
+          </figure>
           <div class="fun-fact">
             💡 <strong>Le savais-tu ?</strong> Le câble MAREA entre les USA et l'Espagne peut transmettre <strong>160 térabits par seconde</strong> — assez pour streamer <strong>71 millions de films HD en simultané !</strong>
           </div>
@@ -481,6 +506,10 @@ const COURSES_DATA = [
           <div class="info-box">
             <strong>🤔 Les routeurs :</strong> Ce sont des ordinateurs spécialisés dont le seul travail est de lire l'adresse IP d'un paquet et de le rediriger vers le prochain routeur le plus proche de sa destination — comme des signaleurs de circulation !
           </div>
+          <figure class="chapter-figure">
+            <img src="img/datacenter.jpg" alt="Allées de serveurs dans un data center" onerror="this.closest('figure').style.display='none'" />
+            <figcaption>L'intérieur d'un data center — des rangées de serveurs s'étendent à perte de vue, refroidis en permanence par des systèmes de climatisation puissants.</figcaption>
+          </figure>
           <h3>Les Data Centers</h3>
           <p>Tes photos Instagram, tes vidéos YouTube, tes emails... tout est stocké dans des <strong>data centers</strong> :</p>
           <ul>
